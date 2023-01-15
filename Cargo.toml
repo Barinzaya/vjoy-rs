@@ -1,0 +1,19 @@
+[package]
+name = "vjoy"
+authors = ["Barinzaya <barinzaya@gmail.com>"]
+description = "A safe wrapper for the vJoy interface library."
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+static_assertions = "1"
+thiserror = "1"
+vjoy-sys = { git = "https://github.com/Barinzaya/vjoy-sys-rs" }
+
+[dev-dependencies]
+anyhow = "1"
+
+[features]
+const-range = []
+const-slots = []
+static = ["vjoy-sys/static"]
